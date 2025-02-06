@@ -9,6 +9,7 @@ import {
     UserButton,
 } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
+import { Navigation } from "./components/site/navigation";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -40,6 +41,7 @@ export default function RootLayout({
                 <body
                     className={`${geistSans.variable} ${geistMono.variable} antialiased`}
                 >
+                    <Navigation />
                     {children}
                 </body>
             </html>
