@@ -2,8 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
 body {
   font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+*, 
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 @layer base {
@@ -69,4 +77,25 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+
+.dotPattern {
+    background-image: radial-gradient(rgb(35, 40, 68) 1px);
+    background-size: 25px 25px;
+}
+
+.use-automation-zoom-in {
+    animation: automation-zoom-in 0.5s;
+}
+
+@keyframes automation-zoom-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
