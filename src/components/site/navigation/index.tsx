@@ -1,3 +1,4 @@
+import { ModeToggle } from "@/components/global/mode-toggle";
 import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
@@ -28,6 +29,7 @@ export const Navigation = () => {
                     Login
                 </Link>
                 <UserButton />
+                <ModeToggle />
             </aside>
         </div>
     );
